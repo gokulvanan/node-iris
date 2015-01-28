@@ -1,0 +1,19 @@
+{
+    "name":"node-iris",
+    "version":"0.0.1",
+    "description":"package provides simple abstractions to communicate between parent child process",
+    "author":"gokulvanan@gmail.com",
+    "scripts":{
+    },
+    "main":"lib/iris",
+    "repository":{
+        "type": "git",
+        "url": "https://github.com/gokulvanan/iris.git"
+    },
+    "dependencies":{
+        "nodeunit":"0.8.2"
+    },
+    "devDependencies":{
+    }
+}
+
