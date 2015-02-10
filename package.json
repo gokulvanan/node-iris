@@ -1,6 +1,6 @@
 {
     "name":"node-iris",
-    "version":"0.0.2",
+    "version":"0.0.3",
     "description":"package provides simple abstractions to communicate between parent child process",
     "author":"gokulvanan@gmail.com",
     "scripts":{
