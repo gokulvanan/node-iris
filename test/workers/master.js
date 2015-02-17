@@ -26,6 +26,7 @@ var Gru = iris.child({ // start child process
 var Minions = iris.child({ // child process
 		name : "Minions",
 		path : __dirname+'/Minions.js',
+		count:4,
 		onMessage : function(data){
 			console.log("Minons says: "+data.msg);
 		},
@@ -41,8 +42,11 @@ var Minions = iris.child({ // child process
 exports.kickStart = function(){
 	Gru.start(); // sync start
 	Minions.start();
-	Gru.tell({ id:1, msg:"mission is a go"});// async send
-	Minions.tell({ msg: "we shall capture the moon;"});
+	setTimeout(function(){
+		Gru.tell({ id:1, msg:"mission is a go"});// async send
+		Minions.tell({ msg: "we shall capture the moon;"});
+	},3000);
+
 	setTimeout(function(){
 		Gru.stop();
 		Minions.stop();
